@@ -1,0 +1,58 @@
+.dep {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--cor-p1);
+  overflow: hidden;
+}
+.dep img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+}
+.dep-conteudo {
+  padding: 40px 40px 80px 80px;
+  align-self: end;
+  background: url("../../../img/dec/bottom-right.svg") no-repeat bottom 40px
+    right 40px;
+}
+.dep-conteudo p {
+  max-width: 32ch;
+  font-family: "merriweather", serif;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: 32px;
+  position: relative;
+}
+.dep p::before,
+.dep p::after {
+  font-size: 5rem;
+  color: var(--cor-p2);
+  position: absolute;
+}
+.dep p::before {
+  content: "“";
+  left: -50px;
+  top: -20px;
+}
+.dep p::after {
+  content: "”";
+}
+@media (min-width: 1200px) {
+.dep img{
+  max-height: 520px;
+}
+}
+@media (max-width: 800px) {
+  .dep {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .dep img {
+    max-height: 200px;
+  }
+  .dep-conteudo {
+    padding: 40px 20px;
+    justify-self: center;
+  }
+}
